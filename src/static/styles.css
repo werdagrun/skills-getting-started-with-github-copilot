@@ -169,12 +169,42 @@ footer {
 
 .participants-list {
   margin: 0;
-  padding-left: 1.2rem;
+  padding-left: 0;
   color: #444;
   font-size: 0.98rem;
+  list-style: none;
 }
 
-.participants-list li {
+.participants-list.no-bullets {
+  list-style: none;
+  padding-left: 0;
+}
+
+.participant-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   margin-bottom: 0.2rem;
-  list-style-type: disc;
+  padding: 0.2rem 0.3rem;
+  border-radius: 4px;
+  transition: background 0.15s;
+}
+.participant-item:hover {
+  background: #f0f0f7;
+}
+
+.delete-participant-btn {
+  background: none;
+  border: none;
+  color: #c62828;
+  font-size: 1.1rem;
+  margin-left: 0.7rem;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 0.1rem 0.4rem;
+  transition: background 0.15s, color 0.15s;
+}
+.delete-participant-btn:hover {
+  background: #ffeaea;
+  color: #a31515;
 }
