@@ -10,13 +10,13 @@ document.addEventListener("DOMContentLoaded", () => {
       const response = await fetch("/activities");
       const activities = await response.json();
 
-      // Clear loading message
+      // Clear loading message and existing content
       activitiesList.innerHTML = "";
+      activitySelect.innerHTML = "<option value=''>Select an activity...</option>";
 
       // Populate activities list
       Object.entries(activities).forEach(([name, details]) => {
         const activityCard = createActivityCard(name, details);
-
         activitiesList.appendChild(activityCard);
 
         // Add option to select dropdown
